@@ -1,6 +1,7 @@
 <canvas id="gc" width="600" height="600"></canvas>
 
 <script>
+    // Function load game
     window.onload = function() {
         canv = document.getElementById("gc");
         ctx = canv.getContext("2d");
@@ -9,6 +10,7 @@
         setInterval(game, 1000/15);
     }
 
+    // Referencies initials
     px = py = 10;
     gs = tc = 20;
     ax = ay = 15;
@@ -16,6 +18,7 @@
     trail = [];
     tail = 5;
 
+    // Function game
     function game() {
         px += xv;
         py += yv;
@@ -67,6 +70,7 @@
         ctx.fillRect(ax*gs, ay*gs, gs-2, gs-2);
     }
 
+    // Keyboard keys
     function keyPush (evt) {
         switch (evt.keyCode) {
             case 37:
